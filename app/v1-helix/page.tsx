@@ -53,7 +53,7 @@ export default function V1Helix() {
               one-size-fits-all multivitamins. No more guessing.
             </p>
             <div className="mt-10 max-w-md">
-              <EmailCapture tone="dark" cta="Request invite" helper="Founders\u2019 list closes at 500." />
+              <EmailCapture tone="dark" cta="Request invite" helper={"Founders\u2019 list closes at 500."} />
             </div>
             <div className="mt-10 flex flex-wrap gap-x-6 gap-y-2 text-[11px] font-mono uppercase tracking-[0.25em] text-white/50">
               {PROOF.map((p) => (
