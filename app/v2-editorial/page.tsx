@@ -2,6 +2,10 @@ import type { Metadata } from 'next';
 import VariantNav from '@/components/VariantNav';
 import EmailCapture from '@/components/EmailCapture';
 import SocialFooter from '@/components/SocialFooter';
+import TrustStrip from '@/components/TrustStrip';
+import Testimonials from '@/components/Testimonials';
+import StickyCTA from '@/components/StickyCTA';
+import SmoothScroll from '@/components/SmoothScroll';
 
 export const metadata: Metadata = {
   title: 'Apothecary — A quiet science of being well',
@@ -23,6 +27,7 @@ const NOTES = [
 export default function V2Editorial() {
   return (
     <>
+      <SmoothScroll />
       <VariantNav tone="light" />
       <main className="min-h-screen bg-[#f6f1e8] text-stone-900">
         <section className="pt-32 pb-24 border-b border-stone-300/60">
@@ -43,6 +48,8 @@ export default function V2Editorial() {
             </div>
           </div>
         </section>
+
+        <TrustStrip tone="light" label="As featured in" />
 
         <section className="py-20 border-b border-stone-300/60">
           <div className="max-w-5xl mx-auto px-8">
@@ -91,7 +98,9 @@ export default function V2Editorial() {
           </div>
         </section>
 
-        <section className="py-24 bg-[#3a4a35] text-stone-50">
+        <Testimonials tone="light" />
+
+        <section id="waitlist" className="py-24 bg-[#3a4a35] text-stone-50">
           <div className="max-w-3xl mx-auto px-8">
             <p className="font-mono text-xs uppercase tracking-[0.3em] text-stone-300 mb-4">The waitlist</p>
             <h2 className="font-serif text-4xl md:text-5xl mb-6">An invitation, by post.</h2>
@@ -105,6 +114,7 @@ export default function V2Editorial() {
 
         <SocialFooter tone="light" brand="APOTHECARY" />
       </main>
+      <StickyCTA tone="light" label="Request invitation" />
     </>
   );
 }

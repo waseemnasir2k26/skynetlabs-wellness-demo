@@ -3,6 +3,10 @@ import { motion } from 'framer-motion';
 import VariantNav from '@/components/VariantNav';
 import EmailCapture from '@/components/EmailCapture';
 import SocialFooter from '@/components/SocialFooter';
+import TrustStrip from '@/components/TrustStrip';
+import Testimonials from '@/components/Testimonials';
+import StickyCTA from '@/components/StickyCTA';
+import SmoothScroll from '@/components/SmoothScroll';
 
 const RITUALS = [
   { t: 'A morning legible.', d: 'Your day begins with two formulations, a glass of water, and a one-line note from the lab.' },
@@ -13,6 +17,7 @@ const RITUALS = [
 export default function V5Aesop() {
   return (
     <>
+      <SmoothScroll />
       <VariantNav tone="light" />
       <main className="min-h-screen bg-[#f4ece1] text-stone-900 overflow-hidden">
         <Blob className="-top-40 -left-40 w-[60vw] h-[60vw] bg-[#d8c2a4]" delay={0} />
@@ -49,6 +54,10 @@ export default function V5Aesop() {
             </motion.p>
           </div>
         </section>
+
+        <div className="relative">
+          <TrustStrip tone="clay" label="As featured in" />
+        </div>
 
         <section className="relative py-24">
           <div className="max-w-5xl mx-auto px-8 grid md:grid-cols-3 gap-12">
@@ -88,7 +97,9 @@ export default function V5Aesop() {
           </div>
         </section>
 
-        <section className="relative py-24">
+        <Testimonials tone="clay" />
+
+        <section id="waitlist" className="relative py-24">
           <div className="max-w-5xl mx-auto px-8">
             <div className="rounded-3xl bg-[#3d3328] text-stone-100 p-12 md:p-16">
               <p className="font-mono text-[11px] uppercase tracking-[0.4em] text-stone-300 mb-6">
@@ -108,6 +119,7 @@ export default function V5Aesop() {
 
         <SocialFooter tone="clay" brand="MAISON" />
       </main>
+      <StickyCTA tone="clay" label="Request invitation" />
     </>
   );
 }

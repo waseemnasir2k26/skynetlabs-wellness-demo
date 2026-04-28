@@ -3,6 +3,10 @@ import { motion } from 'framer-motion';
 import VariantNav from '@/components/VariantNav';
 import EmailCapture from '@/components/EmailCapture';
 import SocialFooter from '@/components/SocialFooter';
+import TrustStrip from '@/components/TrustStrip';
+import Testimonials from '@/components/Testimonials';
+import StickyCTA from '@/components/StickyCTA';
+import SmoothScroll from '@/components/SmoothScroll';
 
 const CARDS = [
   { tag: 'GENOMICS', t: 'Whole-genome screening', d: 'Read 23,000+ genes once. Use the insights for life. We re-process annually as the science updates.', glyph: '∿' },
@@ -21,6 +25,7 @@ const SCIENCE = [
 export default function V3Glass() {
   return (
     <>
+      <SmoothScroll />
       <VariantNav tone="dark" />
       <main className="relative min-h-screen text-white overflow-hidden">
         <div className="fixed inset-0 -z-10">
@@ -84,6 +89,8 @@ export default function V3Glass() {
           </div>
         </section>
 
+        <TrustStrip tone="glass" label="Featured in" />
+
         <section className="relative py-24">
           <div className="max-w-6xl mx-auto px-6">
             <h2 className="font-display text-4xl md:text-5xl max-w-2xl mb-12">A unified system.</h2>
@@ -120,7 +127,9 @@ export default function V3Glass() {
           </div>
         </section>
 
-        <section className="relative py-32">
+        <Testimonials tone="glass" />
+
+        <section id="waitlist" className="relative py-32">
           <div className="max-w-3xl mx-auto px-6 text-center">
             <h2 className="font-display text-4xl md:text-5xl mb-6">Pre-launch · invite only.</h2>
             <p className="text-white/70 mb-10">First cohort gets founders pricing for life and direct access to the science team.</p>
@@ -130,6 +139,7 @@ export default function V3Glass() {
 
         <SocialFooter tone="glass" brand="GLASS LAB" />
       </main>
+      <StickyCTA tone="glass" />
     </>
   );
 }

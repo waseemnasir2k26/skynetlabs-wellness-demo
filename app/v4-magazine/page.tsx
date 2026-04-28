@@ -2,6 +2,10 @@ import type { Metadata } from 'next';
 import VariantNav from '@/components/VariantNav';
 import EmailCapture from '@/components/EmailCapture';
 import SocialFooter from '@/components/SocialFooter';
+import TrustStrip from '@/components/TrustStrip';
+import Testimonials from '@/components/Testimonials';
+import StickyCTA from '@/components/StickyCTA';
+import SmoothScroll from '@/components/SmoothScroll';
 
 export const metadata: Metadata = {
   title: 'CODEX — Wellness, but loud.',
@@ -25,6 +29,7 @@ const NUMBERS = [
 export default function V4Magazine() {
   return (
     <>
+      <SmoothScroll />
       <VariantNav tone="light" />
       <main className="min-h-screen bg-[#FFD600] text-black font-sans">
         <section className="relative pt-24 border-b-4 border-black">
@@ -60,6 +65,8 @@ export default function V4Magazine() {
             ))}
           </div>
         </section>
+
+        <TrustStrip tone="cobalt" label="Press" />
 
         <section className="bg-[#FFD600] border-b-4 border-black">
           <div className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-3 gap-0 border-2 border-black">
@@ -99,7 +106,9 @@ export default function V4Magazine() {
           </div>
         </section>
 
-        <section className="bg-[#FFD600] border-b-4 border-black">
+        <Testimonials tone="cobalt" />
+
+        <section id="waitlist" className="bg-[#FFD600] border-b-4 border-black">
           <div className="max-w-7xl mx-auto px-6 py-24 text-center">
             <h2 className="font-black text-5xl md:text-7xl uppercase mb-6">Get on the list.</h2>
             <p className="text-xl mb-10 max-w-xl mx-auto">
@@ -111,6 +120,7 @@ export default function V4Magazine() {
 
         <SocialFooter tone="cobalt" brand="CODEX" />
       </main>
+      <StickyCTA tone="cobalt" label="LOCK IT IN" />
     </>
   );
 }

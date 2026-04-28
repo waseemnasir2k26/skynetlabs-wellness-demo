@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import VariantNav from '@/components/VariantNav';
+import TrustStrip from '@/components/TrustStrip';
+import Noise from '@/components/Noise';
 
 const VARIANTS = [
   {
@@ -48,8 +50,11 @@ export default function Hub() {
   return (
     <>
       <VariantNav tone="dark" />
-      <main className="min-h-screen pt-24 pb-24 bg-[#0a0a0a] text-white">
-        <section className="max-w-6xl mx-auto px-6">
+      <Noise opacity={0.04} />
+      <main className="relative min-h-screen pt-24 pb-24 bg-[#0a0a0a] text-white overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-[60vw] h-[60vw] rounded-full blur-3xl opacity-30 bg-teal-500 pointer-events-none" />
+        <div className="absolute -bottom-40 -left-40 w-[60vw] h-[60vw] rounded-full blur-3xl opacity-25 bg-violet-600 pointer-events-none" />
+        <section className="relative max-w-6xl mx-auto px-6">
           <p className="font-mono text-xs uppercase tracking-[0.3em] text-white/50 mb-6">
             Skynetlabs · Wellness Brand Demo · 5 Concepts
           </p>
@@ -64,7 +69,11 @@ export default function Hub() {
           </p>
         </section>
 
-        <section className="max-w-6xl mx-auto px-6 mt-16">
+        <div className="relative max-w-6xl mx-auto px-6 mt-16">
+          <TrustStrip tone="dark" label="Built for brands featured in" />
+        </div>
+
+        <section className="relative max-w-6xl mx-auto px-6 mt-16">
           <ul className="grid gap-6 md:grid-cols-2">
             {VARIANTS.map((v, i) => (
               <li key={v.slug}>
@@ -99,7 +108,7 @@ export default function Hub() {
           </ul>
         </section>
 
-        <section className="max-w-6xl mx-auto px-6 mt-24 text-white/60 text-sm leading-relaxed">
+        <section className="relative max-w-6xl mx-auto px-6 mt-24 text-white/60 text-sm leading-relaxed">
           <div className="grid md:grid-cols-3 gap-8 border-t border-white/10 pt-12">
             <div>
               <h3 className="text-white font-medium mb-2">What&apos;s included</h3>
@@ -116,7 +125,7 @@ export default function Hub() {
           </div>
         </section>
 
-        <footer className="max-w-6xl mx-auto px-6 mt-24 text-xs font-mono text-white/40 flex justify-between">
+        <footer className="relative max-w-6xl mx-auto px-6 mt-24 text-xs font-mono text-white/40 flex justify-between">
           <span>SKYNETLABS · skynetjoe.com</span>
           <span>Demo · Not for production traffic</span>
         </footer>
