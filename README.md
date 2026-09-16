@@ -2,6 +2,10 @@
 
 Five distinct premium landing-page concepts for a personalized wellness brand (DNA insights · personalized nutrition · smarter supplementation), built as a speculative pitch deliverable by SkynetLabs.
 
+## Status
+
+Last reviewed: September 2026 · release v2026.09
+
 **Live:** https://skynetlabs-wellness-demo.vercel.app
 
 ## Variants
