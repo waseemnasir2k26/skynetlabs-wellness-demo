@@ -1,0 +1,4 @@
+- Public Next.js 15 / React 19 project holding five landing-page concepts (`/v1-helix` to `/v5-aesop`) for a personalised-wellness brand, built as a speculative pitch; live at https://skynetlabs-wellness-demo.vercel.app, with the client message logged as sent 2026-04-28.
+- October 2026 review: README, tree and history re-read (no commits since the 2026-09-16 release commit). Both external README links returned HTTP 200. Package version bumped 1.1.0 to 1.2.0 as release metadata only; no application code changed.
+- The old "Built by SkynetLabs" footer line is kept and a Work with SkynetLabs section was appended after it.
+- Known gaps: no `public/` directory, so the `/public/logo.svg` named in the README handover step is missing; `WAITLIST_WEBHOOK_URL` is unset so `/api/waitlist` only logs; no LICENSE; no tests or CI beyond `next lint`.
